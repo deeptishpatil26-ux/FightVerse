@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="events.css">
+    <style>
+        header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    padding: 17px 43px;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding: 5px;
+    font-size: large;
+}
+#btn{
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+
+}
+header h1{
+    font-size: xx-large;
+    font-weight: bolder;
+    
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover{
+    color: blue;
+}
+    </style>
+</head>
+<body>
+ <header>
+        <h1>Fight <span style="color: red;">Verse</span></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="fighters.html">Fighters</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <!-- <li><a href="champions.html">Champions</a></li>
+                <li><a href="news.html">News</a></li> -->
+            </ul>
+        </nav>
+        <button id="btn"><a href="search.html">🔍</a> </button>
+    </header>
+
+    
+  <section class="event-hero">
+
+        <div class="hero-overlay">
+
+            <p class="event-label">
+                FIGHTVERSE PRESENTS
+            </p>
+ 
+            <h1>
+                THE OCTAGON<br>
+                <span>AWAITS</span>
+            </h1>
+
+            <p class="hero-text">
+                Experience the biggest fights,
+                legendary fighters and unforgettable
+                moments inside the Octagon.
+            </p>
+
+             <a href="#main-event" class="hero-button">
+                View Main Event
+            </a>
+
+
+        </div>
+
+    </section>
+
+    <section class="main-event" id="main-event">
+        <div class="section-heading">
+            <p>MAIN EVENT</p>
+            <h2>UFC SPECIAL EVENT</h2>
+            <span>SATURDAY NIGHT . LAS VEGAS</span>
+        </div>
+
+        <div class="main-fight">
+            <div class="main-fighter fighter-left">
+                <div class="fighter-image">
+                    <img src="max.avif" alt="MAX HOLLOWAY">
+                </div>
+
+                <div class="fighter-name">
+                    <p>HAWAI . USA</p>
+                    <h3>MAX</h3>
+                    <h2>HOLLOWAY    </h2>
+                <a href="max-profile.html" class="profile-button">View Profile</a>
+                </div>
+
+            </div>
+
+            <div class="vs-area">
+                <p>MAIN EVENT</p>
+                <div class="vs">
+                   VS
+                </div>
+
+                <span>5 ROUNDS</span>
+                <small>FEATHERWEIGHT</small>
+
+
+            </div>
+               <div class="main-fighter fighter-right">
+
+                <div class="fighter-image">
+
+                    <img src="conor1.png"
+                         alt="Conor McGregor">
+
+                </div>
+
+
+                <div class="fighter-name">
+
+                    <p>IRELAND</p>
+
+                    <h3>CONOR</h3>
+
+                    <h2>MCGREGOR</h2>
+                     <a href="conor-profile.html"
+                       class="profile-button">
+
+                        View Profile
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+        </div>
+
+          <section class="prediction-section">
+
+        <div class="section-heading">
+
+            <p>FIGHTVERSE PREDICTION</p>
+
+            <h2>WHO WILL WIN?</h2>
+
+            <span>
+                Use virtual points to make your prediction.
+            </span>
+
+        </div>
+
+         <div class="prediction-box">
+
+
+          
+
+            <div class="prediction-side">
+
+                <h3>MAX HOLLOWAY</h3>
+
+                <div class="percentage"
+                     id="maxPercentage">
+
+                    50%
+
+                </div>
+
+                <div class="progress">
+
+                    <div class="progress-bar max-bar"
+                         id="maxBar">
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="pick-button"
+                    onclick="pickFighter('max')">
+
+                    PICK MAX
+
+                </button>
+
+            </div>
+
+
+
+            <div class="prediction-vs">
+                VS
+            </div>
+
+
+
+           ->
+
+            <div class="prediction-side">
+
+                <h3>CONOR MCGREGOR</h3>
+
+                <div class="percentage"
+                     id="conorPercentage">
+
+                    50%
+
+                </div>
+
+                 <div class="progress">
+
+                    <div class="progress-bar conor-bar"
+                         id="conorBar">
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="pick-button"
+                    onclick="pickFighter('conor')">
+
+                    PICK CONOR
+
+                </button>
+
+                 </div>
+
+                  <div class="points-box">
+
+            <h3>
+                Make Your Prediction
+            </h3>
+
+            <p>
+                Enter virtual points:
+            </p>
+
+            <input
+                type="number"
+                id="points"
+                placeholder="Example: 100"
+                min="1">
+
+                 <button
+                class="predict-button"
+                onclick="submitPrediction()">
+
+                SUBMIT PREDICTION
+
+            </button>
+
+            <p id="predictionMessage"
+               class="prediction-message">
+
+            </p>
+
+        </div>
+
+    </section>
+
+        <section class="fight-card-section">
+
+        <div class="section-heading">
+
+            <p>UFC SPECIAL EVENT</p>
+
+            <h2>FIGHT CARD</h2>
+
+            <span>
+                Complete fight lineup
+            </span>
+
+        </div>
+
+         <div class="fight-card">
+
+
+           
+            <div class="fight-row">
+
+                <div class="fight-number">
+                    01
+                </div>
+
+
+                <div class="card-fighter">
+
+                    <img src="max.avif"
+                         alt="Max Holloway">
+
+                    <div>
+
+                         <h3>Max Holloway</h3>
+
+                        <p>USA</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-vs">
+                    VS
+                </div>
+
+                 <div class="card-fighter right">
+
+                    <div>
+
+                        <h3>Conor McGregor</h3>
+
+                        <p>Ireland</p>
+
+                    </div>
+
+                    <img src="conor1.png"
+                         alt="Conor McGregor">
+
+                </div>
+
+
+
+
+    </section>
+    <script src="events.js"></script>
+
+</body>
+</html>

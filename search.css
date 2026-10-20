@@ -1,0 +1,115 @@
+
+.fighter-section {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.fighter-section h2 {
+    color: red;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: lightgray;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 350px;
+    padding: 12px;
+    border: 1px solid red;
+    border-radius: 25px;
+    background-color: darkslategray;
+    color: white;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: lightgray;
+}
+
+#searchBtn {
+    padding: 12px 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.fighter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.fighter-card {
+    width: 220px;
+    background-color: #181818;
+    border: 1px solid red;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.fighter-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 20px red;
+}
+
+.fighter-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.fighter-card h3 {
+    margin: 15px 5px 8px;
+    color: white;
+}
+
+.fighter-card p {
+    color: lightgray;
+    padding: 0 8px 15px;
+}
+
+#message {
+    color: orange;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .fighter-card {
+        width: 90%;
+        max-width: 300px;
+    }
+}

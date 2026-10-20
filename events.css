@@ -1,0 +1,914 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+.navbar {
+
+    height: 75px;
+
+    background: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.logo {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+
+    color: #ff0000;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+
+    color: red;
+}
+
+
+.nav-links .active {
+
+    color: red;
+}
+
+
+.join-btn {
+
+    background: red;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.join-btn:hover {
+
+    background: white;
+
+    color: black;
+}
+
+
+
+
+
+.event-hero {
+
+    height: 650px;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.9)
+        ),
+
+        url("../images/events-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.hero-overlay {
+
+    max-width: 900px;
+
+    padding: 30px;
+}
+
+
+.event-label {
+
+    color: red;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero-overlay h1 {
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-overlay h1 span {
+
+    color: red;
+}
+
+
+.hero-text {
+
+    color: #ccc;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    max-width: 650px;
+
+    margin: 25px auto;
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    background: red;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+
+    background: white;
+
+    color: black;
+}
+
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.main-event,
+.prediction-section,
+.fight-card-section {
+
+    padding: 100px 6%;
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.section-heading p {
+
+    color: red;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.section-heading h2 {
+
+    font-size: 48px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-heading span {
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+
+
+
+.main-fight {
+
+    min-height: 570px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #130000,
+            #050505,
+            #130000
+        );
+
+    border: 1px solid #292929;
+
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.08);
+}
+
+
+.main-fighter {
+
+    width: 40%;
+
+    height: 570px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+}
+
+
+.fighter-left {
+
+    justify-content: flex-end;
+}
+
+
+.fighter-right {
+
+    justify-content: flex-start;
+}
+
+
+.fighter-image {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.fighter-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: bottom center;
+}
+
+
+
+
+.fighter-name {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    z-index: 5;
+}
+
+
+.fighter-left .fighter-name {
+
+    left: 35px;
+}
+
+
+.fighter-right .fighter-name {
+
+    right: 35px;
+
+    text-align: right;
+}
+
+
+.fighter-name p {
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 5px;
+}
+
+
+.fighter-name h3 {
+
+    font-size: 25px;
+}
+
+
+.fighter-name h2 {
+
+    font-size: 43px;
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+
+.profile-button {
+
+    display: inline-block;
+
+    padding: 9px 18px;
+
+    border: 1px solid #777;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.profile-button:hover {
+
+    background: red;
+
+    border-color: red;
+}
+
+
+
+
+
+.vs-area {
+
+    width: 20%;
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+
+.vs-area p {
+
+    color: red;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.vs {
+
+    font-size: 70px;
+
+    font-weight: 900;
+
+    font-style: italic;
+
+    margin: 10px 0;
+}
+
+
+.vs-area span {
+
+    display: block;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+.vs-area small {
+
+    display: block;
+
+    color: #666;
+
+    margin-top: 10px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+
+
+.prediction-section {
+
+    background: #090909;
+
+    border-top: 1px solid #181818;
+
+    border-bottom: 1px solid #181818;
+}
+
+
+.prediction-box {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    background: #050505;
+
+    padding: 45px;
+
+    border: 1px solid #292929;
+}
+
+
+.prediction-side {
+
+    flex: 1;
+
+    text-align: center;
+}
+
+
+.prediction-side h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+
+.percentage {
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+.progress {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #222;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+}
+
+
+.progress-bar {
+
+    height: 100%;
+
+    width: 50%;
+
+    transition: 0.5s;
+}
+
+
+.max-bar {
+
+    background: red;
+}
+
+
+.conor-bar {
+
+    background: #ddd;
+}
+
+
+.pick-button {
+
+    padding: 12px 25px;
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #555;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.pick-button:hover {
+
+    background: red;
+
+    border-color: red;
+}
+
+
+.prediction-vs {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #666;
+}
+
+
+
+/* =========================
+   POINTS BOX
+========================= */
+
+.points-box {
+
+    max-width: 500px;
+
+    margin: 45px auto 0;
+
+    text-align: center;
+
+    padding: 35px;
+
+    border: 1px solid #292929;
+
+    background: #050505;
+}
+
+
+.points-box h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+
+.points-box p {
+
+    color: #888;
+
+    margin-bottom: 15px;
+}
+
+
+.points-box input {
+
+    width: 220px;
+
+    padding: 13px;
+
+    background: #111;
+
+    border: 1px solid #444;
+
+    color: white;
+
+    outline: none;
+
+    text-align: center;
+}
+
+
+.predict-button {
+
+    display: block;
+
+    margin: 15px auto;
+
+    padding: 12px 25px;
+
+    background: red;
+
+    color: white;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.prediction-message {
+
+    min-height: 25px;
+
+    color: #fff !important;
+
+    font-weight: bold;
+}
+
+
+
+/* =========================
+   FIGHT CARD
+========================= */
+
+.fight-card {
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+.fight-row {
+
+    min-height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 15px 25px;
+
+    margin-bottom: 12px;
+
+    background: #0b0b0b;
+
+    border: 1px solid #222;
+
+    transition: 0.3s;
+}
+
+
+.fight-row:hover {
+
+    border-color: red;
+
+    transform: translateX(5px);
+}
+
+
+.fight-number {
+
+    color: red;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    width: 40px;
+}
+
+
+.card-fighter {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.card-fighter.right {
+
+    justify-content: flex-end;
+
+    text-align: right;
+}
+
+
+.card-fighter img {
+
+    width: 85px;
+
+    height: 100px;
+
+    object-fit: contain;
+}
+
+
+.card-fighter h3 {
+
+    font-size: 18px;
+}
+
+
+.card-fighter p {
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+.card-vs {
+
+    color: red;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.fight-type {
+
+    width: 130px;
+
+    text-align: center;
+}
+
+
+.fight-type span {
+
+    color: red;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.fight-type p {
+
+    color: #777;
+
+    font-size: 11px;
+
+    margin-top: 7px;
+}
+
+
+
+
+
+footer {
+
+    padding: 50px;
+
+    text-align: center;
+
+    background: #000;
+
+    border-top: 1px solid #222;
+}
+
+
+.footer-logo {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-logo span {
+
+    color: red;
+}
+
+
+footer p {
+
+    color: #777;
+
+    margin-top: 8px;
+}
+
+
+footer .copyright {
+
+    font-size: 12px;
+
+    margin-top: 25px;
+}
+
+
+
+
+    

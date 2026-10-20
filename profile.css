@@ -1,0 +1,148 @@
+.fighter-details{
+    max-height: 1100px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(17,17,17);
+    border-left: 4px solid rgba(226,6,0);
+    color: white;
+}
+
+.fighter-category{
+    color: rgba(226,6,0);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.fighter-details h1{
+    font-size: 48px;
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+}
+
+.fighter-details h3{
+    color: rgba(170,170,170);
+    font-size: 18px;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.fighter-stats{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.stat{
+    background: rgba(26,26,26);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(226,6,0);
+}
+
+.stat span{
+    display: block;
+    color: rgba(136,136,136);
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+
+}
+
+.stat strong{
+    font-size: 20px;
+}
+
+.fighting-style,
+.career-stats,
+.recent-fights,
+.achievements {
+    margin-top: 45px;
+}
+
+.fighting-style h2,
+.career-stats h2,
+.recent-fights h2,
+.achievements h2 {
+    color: #e10600;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.fighting-style p {
+    color: #bbb;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stats-grid div {
+    background: #1a1a1a;
+    padding: 25px;
+    text-align: center;
+}
+
+.stats-grid strong {
+    display: block;
+    font-size: 32px;
+    color: white;
+}
+
+.stats-grid span {
+    display: block;
+    margin-top: 8px;
+    color: rgba(136,136,136);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.fight {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 5px 20px;
+    padding: 18px;
+    margin-bottom: 10px;
+    background: #1a1a1a;
+    border-left: 3px solid rgba(226,6,0);
+}
+
+.fight span {
+    grid-row: span 2;
+    color: rgba(226,6,0);
+    font-weight: bold;
+}
+
+.fight strong {
+    font-size: 16px;
+}
+
+.fight p {
+    margin: 0;
+    color: rgba(136,136,136);
+    font-size: 14px;
+}
+
+.achievements ul {
+    padding-left: 20px;
+}
+
+.achievements li {
+    color: #bbb;
+    margin-bottom: 12px;
+    padding-left: 5px;
+}
+
+.achievements li::marker {
+    color: rgba(226,6,0);
+}
